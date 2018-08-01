@@ -259,7 +259,7 @@ void output_example(vw& all, cb_explore& data, example& ec, CB::label& ld)
   uint32_t maxid = 0;
   for(uint32_t i = 0; i < ec.pred.a_s.size(); i++)
   {
-    sprintf(temp_str,"%f ", ec.pred.a_s[i].score);
+    sprintf(temp_str,"%f:%f ", ec.pred.a_s[i].score, c.pred_scores.costs[i].x);
     ss << temp_str;
     if(ec.pred.a_s[i].score > maxprob)
     {
